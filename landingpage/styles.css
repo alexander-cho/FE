@@ -1,0 +1,96 @@
+.header {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+}
+
+.header-links {
+    float: right;
+    font-size: 18px;
+}
+
+.header-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-links ul li {
+    margin: 10px;
+}
+
+.header-links ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container > div {
+    flex: 1; /* Each section takes up equal space */
+    padding: 20px;
+}
+
+
+.one {
+    background-color: #1f2937;
+    color: white;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items along the main axis */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text content */
+}
+
+.left-item, .img-placeholder {
+    flex: 1; /* Each item takes up equal space */
+    padding: 20px; /* Add padding */
+}
+
+.left-item .hero-main-text {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 800; /* extra bold */
+    color: #f9faf8;
+}
+
+.left-item .hero-secondary-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.sign-up-button {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.two {
+    background-color: white;
+    display: flex;
+}
+
+.three {
+    background-color: #e5e7eb;
+}
+
+.four {
+    background-color: white;
+}
+
