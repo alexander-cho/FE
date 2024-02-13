@@ -51,7 +51,6 @@
     display: flex; /* Use flexbox */
     justify-content: center; /* Center items along the main axis */
     align-items: center; /* Center items vertically */
-    text-align: center; /* Center text content */
 }
 
 .left-item, .img-placeholder {
@@ -84,10 +83,44 @@
 .two {
     background-color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+.section-two-header {
+    font-size: 24px;
+}
+
+.boxes-container {
+    display: flex;
+    margin: 40px;
+}
+
+.box {
+    border: solid blue;
+    height: 24px;
+    flex: 1;
+    padding: 40px;
 }
 
 .three {
     background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+.three .quote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: #1f2937;
+}
+
+.three .sayer {
+    align-self: flex-end;
 }
 
 .four {
