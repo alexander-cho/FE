@@ -2,7 +2,6 @@
 rock paper scissors
 */
 
-// get computer choice
 
 const options = ['rock', 'paper', 'scissors'];
 
@@ -46,7 +45,4 @@ function playGame() {
 }
 
 playGame();
-
-
-
 
