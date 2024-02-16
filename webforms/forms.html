@@ -7,8 +7,9 @@
 </head>
 <body>
     <h1>Webform</h1>
-    <p id="demo">Fill out the form below</p>
-
+    <div id="container">
+        <p id="demo">Fill out the form below</p>
+    </div>
     <script>
         function hello() {
             let name = document.getElementById("name").value;
@@ -23,10 +24,12 @@
     </script>
 
     <form id="myform">
+        <br>
         Name: 
         <input id="name" type="text"><br><br>
         <button type="button" onclick="hello()">Submit</button>
         <button type="button" onclick="clearForm()">Reset</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
