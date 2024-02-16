@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Webform</h1>
+    <p id="demo">Fill out the form below</p>
+
+    <script>
+        function hello() {
+            let name = document.getElementById("name").value;
+            document.getElementById("demo").innerHTML = "Hello " + name;
+        }
+
+        // clear form
+        function clearForm() {
+            document.getElementById("demo").innerHTML = "Fill out the form below";
+            document.getElementById("myform").reset();
+        }
+    </script>
+
+    <form id="myform">
+        Name: 
+        <input id="name" type="text"><br><br>
+        <button type="button" onclick="hello()">Submit</button>
+        <button type="button" onclick="clearForm()">Reset</button>
+    </form>
+</body>
+</html>
