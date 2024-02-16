@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomNumbers</title>
+</head>
+<body>
+    <h1>It's very random</h1>
+    <script>
+        // Random numbers between 0 and 10
+        // document.write(Math.floor(Math.random() * 11));
+
+        // Random numbers between 1 and 10
+        // document.write(Math.floor(Math.random() * 10) + 1);
+
+        function randomNumber() {
+            let num = Math.floor(Math.random() * 10) + 1;
+            let answer = prompt("Guess number");
+            if (answer == num) {
+                return "Correct, the number was " + num;
+            } else {
+                return "Incorrect, the number was " + num;
+            }
+        }
+
+        document.write(randomNumber());
+    </script>
+</body>
+</html>
