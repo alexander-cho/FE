@@ -30,16 +30,5 @@
         <button type="button" onclick="hello()">Submit</button>
         <button type="button" onclick="clearForm()">Reset</button>
     </form>
-    <br>
-    Events <br><br>
-    Method 1
-    <button onclick="alert('Hello World')">Click Me</button> This solution is less than ideal because we’re cluttering our HTML with JavaScript. Also, we can only set one “onclick” property per DOM element, so we’re unable to run multiple separate functions in response to a click event using this method.
-    <br>
-    Method 2
-    <button id="btn">Click Me</button> This is a little better. We’ve moved the JS out of the HTML and into a JS file, but we still have the problem that a DOM element can only have 1 “onclick” property.
-    <br>
-    Method 3
-    <button id="btn2">Click Me too</button> Now, we maintain separation of concerns, and we also allow multiple event listeners if the need arises. Method 3 is much more flexible and powerful, though it is a bit more complex to set up.
-    <script src="script.js"></script>
 </body>
 </html>
