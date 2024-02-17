@@ -35,3 +35,14 @@ paragraph2.textContent = "ME TOO";
 border.appendChild(head1);
 border.appendChild(paragraph2);
 container.appendChild(border);
+
+
+// Events, Method 2
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+// Events, Method 3
+const btn2 = document.querySelector("#btn2");
+btn2.addEventListener('click', () => {
+    alert("Hello World");
+});
