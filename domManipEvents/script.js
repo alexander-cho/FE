@@ -51,3 +51,11 @@ btn2.addEventListener('click', function (e) {
     e.target.style.background = 'blue';
 });
 // e.target refers to the html element that triggered the click event which in this case is btn2
+
+// groups of nodes
+const buttons = document.querySelectorAll('#container .btn'); // buttons is a node list, acts like an array
+buttons.forEach((button) => { // iterate through each button
+    button.addEventListener('click', () => { // add a 'click' event listener for each
+        alert(button.id);
+    });
+});
