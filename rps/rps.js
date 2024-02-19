@@ -14,35 +14,59 @@ function getComputerChoice() {
     return randomOption;
 }
 
-function getPlayerChoice() {
-    const playerOption = prompt("rock paper or scissors").toLowerCase();
-    return playerOption;
-}
-
 function playRound(playerSelection, computerSelection) {
+    let result;
     if (playerSelection == computerSelection) {
-        return `It's a tie. it chose ${computerSelection} and you chose ${playerSelection}. it's ${yourScore} to ${botScore}`;
+        result = `It's a tie. you chose ${playerSelection} and it chose ${computerSelection}. it's ${yourScore} to ${botScore}`;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'rock')) {
         yourScore ++;
-        return `you win. it chose ${computerSelection} and you chose ${playerSelection}. it's ${yourScore} to ${botScore}`;
+        result = `you win. you chose ${playerSelection} and it chose ${computerSelection}. it's ${yourScore} to ${botScore}`;
     } else {
         botScore ++;
-        return `The bot wins. it chose ${computerSelection} and you chose ${playerSelection}. it's ${yourScore} to ${botScore}`;
+        result = `The bot wins. you chose ${playerSelection} and it chose ${computerSelection}. it's ${yourScore} to ${botScore}`;
+    }
+    // create a paragraph element to display result
+    const resultParagraph = document.createElement('p');
+    resultParagraph.textContent = result;
+    document.body.appendChild(resultParagraph);
+    if (botScore == 5 || yourScore == 5) {
+        let winner;
+        if (botScore == 5) {
+            winner = "The bot";
+        } else {
+            winner = "You";
+        }
+        const gameWinningParagraph = document.createElement('p');
+        gameWinningParagraph.textContent = `${winner} won`;
+        gameWinningParagraph.style.color = 'red';
+        document.body.appendChild(gameWinningParagraph);
+        // Disable the buttons to prevent further clicks
+        buttons.forEach(button => button.disabled = true);
     }
 }
 
-function playGame() {
-    while (yourScore < 5 && botScore < 5) {
-        const playerSelection = getPlayerChoice();
+const rockButton = document.createElement('button');
+rockButton.textContent = "Rock";
+document.body.appendChild(rockButton);
+const paperButton = document.createElement('button');
+paperButton.textContent = "Paper";
+document.body.appendChild(paperButton);
+const scissorsButton = document.createElement('button');
+scissorsButton.textContent = "Scissors";
+document.body.appendChild(scissorsButton);
+
+const buttons = document.querySelectorAll('button')
+buttons.forEach(function(currentButton){
+    currentButton.addEventListener('click', () => {
+        const playerSelection = currentButton.textContent.toLowerCase();
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-    if (botScore > yourScore) {
-        console.log("The bot won");
-    } else {
-        console.log("You win");
-    }
-}
+        playRound(playerSelection, computerSelection);
+    });
+});
 
-playGame();
+const results = document.createElement('div');
+results.classList.add('results');
+results.textContent = "Results and scoring:";
+
+document.body.appendChild(results);
 
