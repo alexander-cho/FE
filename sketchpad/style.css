@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+
+.row {
+    flex: 1;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.box:hover {
+    background-color: black;
+}
