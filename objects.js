@@ -49,5 +49,3 @@ function palindromes(myStr) {
 
 console.log(palindromes("Rats live on no evil star".toLowerCase()));
 
-
-
